@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CORE.TR Embed Editörü</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CORE.TR </h1>
+    <div class="main-layout">
+      <div class="editor">
+        <form id="embedForm" autocomplete="off">
+          <label>Başlık
+            <input type="text" id="title" placeholder="Başlık">
+          </label>
+          <label>Açıklama
+            <textarea id="description" placeholder="Açıklama"></textarea>
+          </label>
+          <label>Renk
+            <input type="color" id="color" value="#5865F2">
+          </label>
+          <label>Sol Üst Köşedeki Küçük Resim URL
+            <input type="url" id="thumbnail" placeholder="Küçük resim URL">
+          </label>
+          <label>Orta Alanda Gözükücek Resim URL
+            <input type="url" id="image" placeholder="Büyük resim URL">
+          </label>
+          <label>Alt bilgi
+            <input type="text" id="footer" placeholder="Alt bilgi">
+          </label>
+          <label>Rol ID (Bahsetmek için)
+            <input type="text" id="roleid" placeholder="123456789012345678">
+          </label>
+          <label>Discord Webhook URL
+            <input type="url" id="webhook" placeholder="https://discord.com/api/webhooks/...">
+          </label>
+          <button type="button" id="sendDiscord">Discord'a Gönder</button>
+          <button type="button" id="copyJson">JSON çıktısını kopyala</button>
+        </form>
+      </div>
+      <div class="preview">
+        <div class="discord-message">
+          <div class="avatar"><img src="https://cdn.discordapp.com/embed/avatars/0.png" alt="avatar"></div>
+          <div class="msg-content">
+            <div class="msg-header">
+              <span class="username">CORE.TR</span>
+              <span class="timestamp" id="msgTime"></span>
+            </div>
+            <div id="embedPreview" class="embed"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
